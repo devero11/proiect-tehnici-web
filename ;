@@ -1,0 +1,370 @@
+
+body{
+  background: #111111;
+  padding: 0;
+  margin: 0;
+
+  font-family: 'Courier New', Courier, monospace;
+}
+header{
+  overflow: visible;
+}
+nav{
+  top: 0; 
+  position: fixed;
+  height: 104px;
+  background: #111111;
+  z-index: 4;
+  width: 100%;
+  border: 4px;
+  border-bottom: 2px solid #333333;
+  display: flex;
+  flex-direction: column;
+  padding-top: 24px;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
+}
+
+
+
+
+
+.title{
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  color: red;
+  align-items: center;
+  text-decoration: none;
+    background: linear-gradient(90deg, red, orange, red);
+    background-size: 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: flow 10s linear infinite;
+}
+.title span:first-child{
+  font-size: 18px;
+}
+
+.title span:nth-child(2){
+  font-weight: bold;
+  font-size: 24px;
+}
+#dropdown{
+  
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 18px;
+  width: 100%;
+  font-family: 'Courier New', Courier, monospace;
+  cursor: pointer;
+  padding: 14px;
+  
+  transition: background 0.2s, color 0.2s ;
+
+  background: transparent;
+}
+#dropdown::after {
+  display: inline-block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  border-radius: 3px 0 0 0;
+  border-left: 2px solid white;
+  border-top: 2px solid white; 
+  margin-left: 10px;
+  transform: rotate(-135deg) translateY(3px);
+
+  transition: background 0.2s, color 0.2s , border-color 0.2s;
+}
+#dropdown:hover{
+
+
+  background: orange;
+  color: black;
+  border-color: black;
+
+}
+.dropdown-menu li{
+  height: 0px;
+  cursor: pointer;
+  line-height: 46px;
+  padding-right: 24px;
+  padding-left: 24px;
+  transition: background 0.2s;
+  color: transparent;
+  transition: color 0.4s, height 0.4s;
+}
+
+#dropdown:focus + .dropdown-menu{
+  display: block;
+  background-color: white;
+}
+.dropdown-menu li:hover{
+  background: #FFEEBB;
+}
+#dropdown:focus + .dropdown-menu li{
+  height: 48px;
+  color: black;
+}
+#dropdown:focus{
+
+  background: white;
+  color: black;
+}
+#dropdown:focus::after{
+  border-color: black; 
+}
+#dropdown:hover::after{
+  color: black;
+  border-color: black;
+}
+.dropdown-menu{
+  color: black;
+  display: none;
+  text-decoration: none;
+  list-style-type: none;
+  flex-direction: column;
+  justify-items: space-between;
+  text-align: center; 
+  padding-right: 0;
+  padding-left: 0;
+  white-space: nowrap;
+  margin: 0;
+}
+.dropdown{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  position: relative;
+}
+.pholder{
+  width: 100%;
+  height: 100vh;
+  background: -webkit-linear-gradient(90deg,transparent , #55555522);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-image: url(./assets/map.png);
+  opacity: 20%;
+}
+@keyframes flow {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: -150% 50%; }
+
+}
+.title-card{
+  margin-top: 84px;
+  font-family: 'Courier New', Courier, monospace;
+  height: 90vh;
+  font-weight:   normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-image: url(./assets/map.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  background-position: center;
+}
+
+.title-card h1{
+  width: 300px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 30px;
+  margin: 0;
+}
+.title-card section{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+h2{
+  color: lightgray;
+  font-weight: lighter;
+  margin:0;
+  font-size: 15px;
+  padding-top: 24px;
+  white-space: nowrap;
+}
+
+
+.title-card section h2:first-child:hover{
+  color: #3311BB;
+}
+
+.title-card section h2:nth-child(2):hover{
+  color: #FFFF11;
+}
+
+.title-card section h2:nth-child(3):hover{
+  color: #FF3333;
+}
+
+.article-card{
+  display: flex;
+  justify-content: center;
+  color: white;
+  padding-top: 50vh;
+  height: 130vh;
+  bottom: 10vh;  
+  font-weight: lighter;
+  text-align: center;
+}
+.article-card h1{
+  padding-bottom: 10vh;
+  top: 50vh;
+  position: sticky;
+  font-weight: lighter;
+  height: fit-content;
+}
+
+
+.photo-1{
+  width: 100%;
+  overflow: clip;
+  display: grid;
+}
+.photo-1 .bg{
+}
+.photo-1 > *{
+  width: 150%;
+  grid-area: 1/1;
+}
+.photo-1 .mg{
+  view-timeline-name: --enter;
+  view-timeline-axis: block;
+  animation: mg-parallax linear;
+  animation-timeline: scroll();
+  animation-timeline: --enter;
+  animation-range: entry 0% cover 100%;
+}
+
+.photo-1 .fg{
+  view-timeline-name: --enter;
+  view-timeline-axis: block;
+  animation: fg-parallax linear;
+  animation-timeline: scroll();
+  animation-timeline: --enter;
+  animation-range: entry 0% cover 100%;
+
+}
+
+@keyframes mg-parallax{
+  0%
+  {
+    transform: translateY(100px);
+  }
+  50%{
+    transform: translateY(0px);
+  }
+}
+@keyframes fg-parallax{
+  0% 
+  {
+    transform: translateY(200px);
+  }
+  50%{
+    transform: translateY(0px);
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  nav{
+    top: 0;
+    flex-direction: row;
+    padding-top: 0;
+    align-items: center;
+    height: 84px;
+    justify-items: space-around;
+  }
+  .title{
+    margin-left: 24px;
+    padding-bottom: 0;
+    align-items: flex-start;
+  }
+  .dropdown{
+    margin-right: 24px;
+    height: 44px;
+    width: 240px;
+  }
+  #dropdown:focus{
+    border-radius: 10px 10px 0 0;
+  }
+  #dropdown:focus + .dropdown-menu{
+    border-radius: 0 0 10px 10px;
+  }
+  #dropdown{
+    border-radius: 10px;
+  }
+  .dropdown-menu li:nth-child(5){
+    border-radius: 0 0 10px 10px;
+  }
+  .title-card h1{
+    font-size: 34px;
+    width: 450px;
+  }
+  h2{
+    font-size: 18px;
+  }
+ @keyframes mg-parallax{
+  0%
+  {
+    transform: translateY(120px);
+  }
+  50%{
+    transform: translateY(0px);
+  }
+}
+@keyframes fg-parallax{
+  0% 
+  {
+    transform: translateY(250px);
+  }
+  50%{
+    transform: translateY(0px);
+  }
+} 
+}
+@media only screen and (min-width: 1024px) {
+  
+  .title-card h1{
+    font-size: 44px;
+    width: 550px;
+  }
+  h2{
+    font-size: 22px;
+  }
+@keyframes mg-parallax{
+  0%
+  {
+    transform: translateY(500px);
+  }
+  50%{
+    transform: translateY(0px);
+  }
+}
+@keyframes fg-parallax{
+  0% 
+  {
+    transform: translateY(1000px);
+  }
+  50%{
+    transform: translateY(0px);
+  }
+}
+.photo-1 > *{
+  width: 150%;
+  grid-area: 1/1;
+}
+}
+
