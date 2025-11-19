@@ -223,6 +223,7 @@ li a{
   align-items: center;
   color: white;
   background-image: url(./assets/map.png);
+  background-attachment: fixed;
   opacity: 20%;
 }
 @keyframes flow {
@@ -236,6 +237,8 @@ li a{
   font-weight:   normal;
   display: flex;
   justify-content: center;
+
+  background-attachment: fixed;
   align-items: center;
   color: white;
   background-image: url(./assets/map.png);
@@ -298,8 +301,25 @@ h2{
   text-align: center;
 }
 footer{
-  height: 35vh;
+  background: #232323;
+  margin-top: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+.about{}
+
+.rights{
+  border-top: 2px solid #333333;
+  height: 15vh;
+  margin-right: 45px;
+  margin-left: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: gray;
+}
+
 .article{
   color: white;
   flex-direction: column;
@@ -374,6 +394,103 @@ b{
     transform: translateY(0px);
   }
 }
+audio{
+  max-width: 100px;
+  max-height: 45px;
+  overflow: hidden;
+  align-items: start;
+}
+audio::-webkit-media-controls-panel {
+  background: none;
+}
+
+audio::-webkit-media-controls-play-button {
+  display: block;
+}
+
+audio::-webkit-media-controls-timeline,
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display,
+audio::-webkit-media-controls-seek-back-button,
+audio::-webkit-media-controls-seek-forward-button,
+audio::-webkit-media-controls-mute-button,
+audio::-webkit-media-controls-volume-slider {
+  display: none !important;
+}
+
+.author{
+  display: grid;
+;
+  align-items: center;
+  justify-items: center;
+}
+.author > *{
+  grid-area: 1/1;
+}
+.author img{
+  border-radius: 50%;
+  border: 4px solid orange;
+  height: 300px;
+}
+footer{
+  color: white;
+}
+
+.content p:nth-of-type(3){
+  color: orange; 
+
+
+    background: linear-gradient(90deg, red, orange, red);
+    width:fit-content;
+    background-size: 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: flow 10s linear infinite;
+}
+audio{
+  display: none;
+}
+.about p{
+  line-height: 20px;
+  text-indent: 0;
+}
+.about h3{
+  font-size: 25px;
+    background: linear-gradient(90deg, red, orange, red);
+    width:fit-content;
+    background-size: 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: flow 10s linear infinite;
+}
+iframe{
+  width: 100%;
+  height: 100%;
+}
+.song{
+  margin-top: 10vh;
+  height: 700px;
+}
+.about{
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding-right: 124px;
+  padding-left: 124px;
+  gap: 48px;
+}
+.author img:hover + audio{
+  display: block;
+}
+audio:hover{
+  display: block;
+}
 
 @media only screen and (min-width: 740px) {
   aside{
@@ -398,6 +515,9 @@ b{
 
     }
   }
+.about{
+    flex-direction: row;
+  }
   nav{
     top: 0;
     flex-direction: row;
@@ -416,6 +536,7 @@ b{
     height: 44px;
     width: 240px;
   }
+
   #dropdown:focus{
     border-radius: 10px 10px 0 0;
   }
@@ -456,6 +577,7 @@ b{
 } 
 }
 @media only screen and (min-width: 1024px) {
+  
   .article{
     flex-direction: row;
   } 
