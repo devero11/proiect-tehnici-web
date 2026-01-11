@@ -115,6 +115,24 @@ aside{
   font-weight: bold;
   font-size: 24px;
 }
+.secret{
+background: transparent;
+  color: white;
+  max-width: 25vh;
+  margin-right: 12px;
+  font-size: 18px;
+  border-radius: 10px;
+  width: 100%;
+  font-family: 'Courier New', Courier, monospace;
+  cursor: pointer;
+  border: solid orange 2px; 
+  border-color: orange;
+  padding: 14px;
+}
+.secret:hover{
+  background: orange; 
+  color: black;
+}
 #dropdown{
   
   background: transparent;
@@ -213,6 +231,12 @@ li a{
   justify-content: flex-start;
   flex-direction: column;
   position: relative;
+}
+.butts{
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  justify-content: flex-end;
 }
 .pholder{
   width: 100%;

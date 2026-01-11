@@ -3,7 +3,8 @@ class Player{
     this.x = x
     this.y = y
     this.angle = angle
+    this.health = 20
   }
 }
 
-export var player = new Player(620,620,0)
+export var player = new Player(1220,1220,0)
