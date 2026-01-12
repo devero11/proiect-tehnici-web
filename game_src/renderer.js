@@ -1,4 +1,4 @@
-import {load, map, skybox, wall} from './game_src/loader.js'
+import {load, map, skybox, wall} from './loader.js'
 
     let gunframe = 0 
 let PL
