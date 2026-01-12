@@ -9,7 +9,7 @@ class Enemy{
     this.distance = 0
   }
 }
-let killed = 0
+export let killed = 0
 let offsetFrame= 200
 //SETUP CANVAS
 //
@@ -290,7 +290,12 @@ setInterval(() => {
   }
 }, 1000);
 
-
+window.addEventListener('keyup', (event) => {
+  console.log(event.key.toLowerCase())
+  if(event.key.toLowerCase() == "b")
+  Shoot(PL)
+});
 canvas.addEventListener('click', () => {
+
   Shoot(PL)
 });

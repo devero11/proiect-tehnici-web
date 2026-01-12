@@ -78,6 +78,9 @@ p{
   text-align: center;
   text-indent: 0;
 }
+h1{
+  color: red;
+}
 .b2{
   width: 32vh;
   margin-top: 0;
