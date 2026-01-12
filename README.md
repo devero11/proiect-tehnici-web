@@ -1,5 +1,7 @@
 # The True Romanian History
 
+https://devero11.github.io/proiect-tehnici-web/
+
 This repository contains a satirical website dedicated to the "true" history of Romania, blending humor, conspiracy theories, and national pride. The project features a collection of articles with dynamic parallax visuals and culminates in a retro-style, browser-based First-Person Shooter (FPS) game built from scratch using JavaScript and the Canvas API.
 
 ## Features
