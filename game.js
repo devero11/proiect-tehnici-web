@@ -1,7 +1,7 @@
-import {load, map, skybox} from '/game_src/loader.js'
-import {killed,draw, canvas} from '/game_src/renderer.js'
-import {update} from '/game_src/update.js'
-import {player} from '/game_src/player.js'
+import {load, map, skybox} from './game_src/loader.js'
+import {killed,draw, canvas} from './game_src/renderer.js'
+import {update} from './game_src/update.js'
+import {player} from './game_src/player.js'
 let rotate = 0
 let gameover =true 
 let highscore= localStorage.getItem("highscore")? localStorage.getItem("highscore") : 0;
