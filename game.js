@@ -8,9 +8,10 @@ let highscore= localStorage.getItem("highscore")? localStorage.getItem("highscor
 let highText = document.getElementById("highscore")     
 highText.textContent = "High Score: " +highscore.toString()
 //SETUP FULLSCREEN LOGIC
-document.getElementById("play").addEventListener("click", (event) => {
+document.body.addEventListener("click", (event) => {
 const target = event.target.getAttribute("id");
 const currentTarget = event.currentTarget.getAttribute("id");
+  if(target == "play"){
   if (document.fullscreenElement){
     document.exitFullscreen();
     return;
@@ -18,7 +19,7 @@ const currentTarget = event.currentTarget.getAttribute("id");
   gameover = false
   canvas.style.display = "block"
   canvas.requestFullscreen();
-});
+}});
 document.addEventListener("fullscreenchange", () => {
   canvas.style.display = !document.fullscreenElement? "none" : "block"
 })
